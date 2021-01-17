@@ -26,7 +26,7 @@ def build_loss(neural_net, optimizing_img, target_representations, content_featu
 
     tv_loss = utils.total_variation(optimizing_img)
 
-    total_loss = config['content_weight'] * content_loss + config['style_weight'] * (style_loss) + config['tv_weight'] * tv_loss
+    total_loss = config['content_weight'] * content_loss + config['style_weight'] * style_loss + config['tv_weight'] * tv_loss
 
     return total_loss, content_loss, style_loss, tv_loss
 
